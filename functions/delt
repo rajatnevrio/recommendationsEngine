@@ -1,0 +1,933 @@
+exports.storeRecommendations = functions.https.onRequest(
+  async (request, response) => {
+    try {
+      // Recommendations for Menstrual Cycle
+      await storeRecommendations("recommendations", "health_and_wellness", [
+        {
+          condition: "Improve My General Health & Wellness",
+          recommendation: "Male: twice daily (2 after breakfast) and omegaAvail synergy (1 after any meal)",
+        },
+        {
+          condition: "Support My Immune system",
+          recommendation: "How often do you get colds?* Biofizz immune- 1 scoop after any meal",
+        },
+        {
+          condition: "Reduce Body Fat",
+          recommendation: "Thermo-EFx™- Take 2 capsules per day (after meal)",
+        },
+        {
+          condition: "Bone health",
+          recommendation: "Osteoben- Take 4 capsules per day",
+        },
+        {
+          condition: "Stress relief",
+          recommendation: "In general, how much stress do you have in life?* Adrenotone- 1 capsule after meal (twice a day) and 2nd priority- Magnesium glycinate complex (2 capsules per day)",
+        },
+        {
+          condition: "Maintain Healthy Skin, Hair and Nails",
+          recommendation: "Skin- Whole body collagen 1 scoop after meal, Hair- HSN complete- Take 4 capsules per day with meals, Nail- HSN complete- Take 4 capsules per day with meals",
+        },
+        {
+          condition: "Increase my Energy",
+          recommendation: "In general, how are your energy levels? Mito NR- Take 2 capsules per day with a meal, Magnesium malate- 2 after meal",
+        },
+        {
+          condition: "Gut health issues",
+          recommendation: "I have had antibiotics in the past year or did frequently in the past? Therbiotic complete (keep refrigerated) 1 after meal, I often have gas and bloating- vitalzyme complete before each meal, 2nd priority- therbiotic complete (refrigerate- 1 after any meal), I often have indigestion (heartburn, nausea, belching, repearing of food)- vitalzyme complete- 1 before each meal and 2nd priority- Therbiotic complete (keep refrigerated) 1 after meal, I frequently have diarrhea or soft stools - Diarrhoea- Saccahromyces boulardii- (refrigerate- 1 capsule after any meal), I often deal with constipation- Colon Rx- Take 2 capsules with 8 ounces of water at bedtime and 2nd priority is Therbiotic complete (keep refrigerated) 1 after me, None of the above",
+        },
+        {
+          condition: "Get Restful Sleep",
+          recommendation: "Insomnitol (1-2 capsules - 30 minutes before bed) and 2nd priority Trimag Supreme night 1/2 to 1 scoop 30 minutes before bed",
+        },
+        {
+          condition: "Improve Fitness performance (improve my workout)",
+          recommendation: "PreTrain NRG™ (Mix 9 grams (approximately one scoop) in 8 ounces of water and consume 30 to 45 minutes before a workout), 2nd priority- Amino Acid Supreme™ (Mix 12 grams (approximately one scoop) in 8 to 10 ounces of water per day)",
+        },
+        {
+          condition: "Gain Lean Muscles mass",
+          recommendation: "KreAlkalyn Pro- Take 2 capsules per day, 2nd priority- Phytotein (if vegetarian or vegan Mix 29 to 34 grams (approximately one scoop) in 10 ounces of water) OR PurePaleo- if non-veg and dairy free then Mix 27 grams (approximately one scoop) in 8 ounces of water OR WheyCool (If non-veg ) Mix 30 grams (approximately one scoop) in 8 ounces of water or any other beverage per day",
+        },
+      ]);
+      
+
+      response.status(200).send("Recommendations stored successfully!");
+    } catch (error) {
+      console.error("Error storing recommendations:", error);
+      response.status(500).send("Internal Server Error");
+    }
+  }
+);
+await storeRecommendations("recommendations", "menstrual_cycle", [
+    {
+      condition: "Currently menstruating",
+      recommendation: "DFH Multi with Copper & Iron",
+      details:
+        "Female, having menses: Complete Multi with Copper & Iron (Take 4 capsules per day (2 with each meal)) and OmegaAvail synergy (1 after any meal)",
+    },
+    {
+      condition: "Post Menopause/ Hysterectomy",
+      recommendation: "DFH Multi (free of copper and iron)",
+      details:
+        "Female not having menses: Complete Multi without Copper & Iron (Take 4 capsules per day (2 with each meal)) and OmegaAvail synergy (1 after any meal)",
+    },
+    {
+      condition: "Not currently menstruating due to birth control etc",
+      recommendation: "DFH Multi (free of copper and iron)",
+      details:
+        "Female not having menses: Complete Multi without Copper & Iron (Take 4 capsules per day (2 with each meal)) and OmegaAvail synergy (1 after any meal)",
+    },
+    {
+      condition: "I am pregnant",
+      recommendation:
+        "Multi will be- Prenatal pro- Take 4 capsules per day",
+    },
+    {
+      condition: "I am breastfeeding",
+      recommendation:
+        "Multi will be- Prenatal pro- Take 4 capsules per day",
+    },
+    {
+      condition: "I'm trying for a baby",
+      recommendation:
+        "Multi will be- Prenatal pro- Take 4 capsules per day",
+    },
+  ]);
+
+
+
+
+  /////////////
+
+  /* eslint-disable */
+
+const functions = require("firebase-functions");
+const admin = require("firebase-admin");
+
+admin.initializeApp();
+const storeRecommendations = async (collectionName, docId, recommendations) => {
+  const db = admin.firestore();
+  const docRef = db.collection(collectionName).doc(docId);
+
+  try {
+    await docRef.set({ responses: recommendations });
+    console.log(`Recommendations for ${docId} stored successfully!`);
+  } catch (error) {
+    console.error(`Error storing recommendations for ${docId}:`, error);
+  }
+};
+
+exports.storeRecommendations = functions.https.onRequest(
+  async (request, response) => {
+    try {
+      // Recommendations for Menstrual Cycle
+      await storeRecommendations("recommendations", "health_and_wellness", [
+        {
+          condition: "Improve My General Health & Wellness",
+          recommendation: "Male: twice daily (2 after breakfast) and omegaAvail synergy (1 after any meal)",
+        },
+        {
+          "condition": "Support My Immune system",
+          "subconditions": [
+            {
+              "question": "How often do you get colds?",
+              "recommendation": "Biofizz immune- 1 scoop after any meal"
+            },
+            // {
+            //   "question": "Another subquestion",
+            //   "recommendation": "Another recommendation"
+            // }
+          ]
+        },
+        {
+          condition: "Reduce Body Fat",
+          recommendation: "Thermo-EFx™- Take 2 capsules per day (after meal)",
+        },
+        {
+          condition: "Bone health",
+          recommendation: "Osteoben- Take 4 capsules per day",
+        },
+        {
+          condition: "Stress relief",
+          recommendation: "In general, how much stress do you have in life?* Adrenotone- 1 capsule after meal (twice a day) and 2nd priority- Magnesium glycinate complex (2 capsules per day)",
+        },
+        {
+          condition: "Maintain Healthy Skin, Hair and Nails",
+          recommendation: "Skin- Whole body collagen 1 scoop after meal, Hair- HSN complete- Take 4 capsules per day with meals, Nail- HSN complete- Take 4 capsules per day with meals",
+        },
+        {
+          condition: "Increase my Energy",
+          recommendation: "In general, how are your energy levels? Mito NR- Take 2 capsules per day with a meal, Magnesium malate- 2 after meal",
+        },
+        {
+          condition: "Gut health issues",
+          recommendation: "I have had antibiotics in the past year or did frequently in the past? Therbiotic complete (keep refrigerated) 1 after meal, I often have gas and bloating- vitalzyme complete before each meal, 2nd priority- therbiotic complete (refrigerate- 1 after any meal), I often have indigestion (heartburn, nausea, belching, repearing of food)- vitalzyme complete- 1 before each meal and 2nd priority- Therbiotic complete (keep refrigerated) 1 after meal, I frequently have diarrhea or soft stools - Diarrhoea- Saccahromyces boulardii- (refrigerate- 1 capsule after any meal), I often deal with constipation- Colon Rx- Take 2 capsules with 8 ounces of water at bedtime and 2nd priority is Therbiotic complete (keep refrigerated) 1 after me, None of the above",
+        },
+        {
+          condition: "Get Restful Sleep",
+          recommendation: "Insomnitol (1-2 capsules - 30 minutes before bed) and 2nd priority Trimag Supreme night 1/2 to 1 scoop 30 minutes before bed",
+        },
+        {
+          condition: "Improve Fitness performance (improve my workout)",
+          recommendation: "PreTrain NRG™ (Mix 9 grams (approximately one scoop) in 8 ounces of water and consume 30 to 45 minutes before a workout), 2nd priority- Amino Acid Supreme™ (Mix 12 grams (approximately one scoop) in 8 to 10 ounces of water per day)",
+        },
+        {
+          condition: "Gain Lean Muscles mass",
+          recommendation: "KreAlkalyn Pro- Take 2 capsules per day, 2nd priority- Phytotein (if vegetarian or vegan Mix 29 to 34 grams (approximately one scoop) in 10 ounces of water) OR PurePaleo- if non-veg and dairy free then Mix 27 grams (approximately one scoop) in 8 ounces of water OR WheyCool (If non-veg ) Mix 30 grams (approximately one scoop) in 8 ounces of water or any other beverage per day",
+        },
+      ]);
+      
+
+      response.status(200).send("Recommendations stored successfully!");
+    } catch (error) {
+      console.error("Error storing recommendations:", error);
+      response.status(500).send("Internal Server Error");
+    }
+  }
+);
+const getRecommendation = async (params) => {
+  const { age, gender, health_and_wellness, menstrual_cycle } = params;
+  const collectionName = "recommendations";
+  let docIds = [];
+  console.log("first", health_and_wellness, menstrual_cycle);
+
+  // Logic to determine the dynamic docId based on params
+  if (health_and_wellness) {
+    docIds.push("health_and_wellness");
+  }
+  if (menstrual_cycle) {
+    docIds.push("menstrual_cycle");
+  }
+
+  const db = admin.firestore();
+  const recommendations = [];
+
+  // Iterate through each dynamic docId
+  for (const docId of docIds) {
+    const docRef = db.collection(collectionName).doc(docId);
+
+    try {
+      const doc = await docRef.get();
+      if (!doc.exists) {
+        console.error(`Document ${docId} not found.`);
+        continue; // Move to the next iteration if the document is not found
+      }
+
+      const data = doc.data();
+      const responses = data.responses || [];
+
+      // Check if the condition array is related to health_and_wellness
+      if (health_and_wellness && docId === "health_and_wellness") {
+        for (const condition of health_and_wellness) {
+          const recommendation = responses.find(
+            (response) => response.condition === condition
+          );
+
+          if (recommendation) {
+            recommendations.push(recommendation);
+          }
+        }
+      }
+
+      // Check if the condition array is related to menstrual_cycle
+      if (menstrual_cycle && docId === "menstrual_cycle") {
+        for (const condition of menstrual_cycle) {
+          const recommendation = responses.find(
+            (response) => response.condition === condition
+          );
+
+          if (recommendation) {
+            recommendations.push(recommendation);
+          }
+        }
+      }
+    } catch (error) {
+      console.error(`Error getting recommendations for ${docId}:`, error);
+      return null;
+    }
+  }
+
+  return recommendations.length > 0 ? recommendations : null;
+};
+
+
+
+exports.getRecommendation = functions.https.onRequest(
+  async (request, response) => {
+    try {
+      const { params } = request.body;
+      if (!params || !params.age || !params.gender) {
+        response.status(400).send("Bad Request: Missing required parameters.");
+        return;
+      }
+
+      const recommendations = await getRecommendation(params);
+
+      if (!recommendations) {
+        response.status(404).send("Recommendations not found.");
+        return;
+      }
+
+      response.status(200).json(recommendations);
+    } catch (error) {
+      console.error("Error getting recommendations:", error);
+      response.status(500).send("Internal Server Error");
+    }
+  }
+);
+
+
+///////////////////////////////////
+
+
+
+POST http://127.0.0.1:5001/nutra-nourish/us-central1/getRecommendation
+Content-Type: application/json
+
+{
+  "params": {
+    "age": 18,
+    "gender": "female", 
+    "menstrual_cycle": [ "Post Menopause/ Hysterectomy","Currently menstruating"],
+    "health_and_wellness": [ "Support My Immune system"]
+  }
+}
+///////////////////////////////
+
+
+userData = {
+"age" : 28,
+"gender": "Female",
+"How is your menstrual cycle":"currently",
+"if ther is any concern":[
+    {"immune":[
+        "how often you get cold "
+    ] },
+    {"maintain Healthy skin,hair,nails" :[
+        "skin","hair","nail"
+    ]},
+    'heart health',
+    'anxiety',
+    {'Gut health issues':[
+        "I have had antibiotics in the past year or did frequently in the past?",
+        "I often have gas and bloating",
+        "I often have indigestion"
+]}
+],
+"vitamind":"yes",
+"Has your doctor recommended to take vitamin iron?" :"yes",
+"Do you frequently suffer from Seasonal Allergies?":[
+    "histease",
+    "other Allergy"
+],
+
+}
+
+
+////////////
+await storeRecommendations("recommendations", "concerns", [
+    {
+      "Improve My General Health & Wellness":
+        "Male: twice daily (2 after breakfast) and omegaAvail synergy (1 after any meal)",
+    },
+    {
+      "Support My Immune system": [
+        {
+          "How often do you get colds?":
+            "Biofizz immune- 1 scoop after any meal",
+        },
+      ],
+    },
+    {
+      "Reduce Body Fat":
+        "Thermo-EFx™- Take 2 capsules per day (after meal)",
+    },
+    {
+      "Bone health": "Osteoben- Take 4 capsules per day",
+    },
+    {
+      "Stress relief": [
+        {
+          "In general, how much stress do you have in life?":
+            "Adrenotone- 1 capsule after meal (twice a day) and 2nd priority- Magnesium glycinate complex (2 capsules per day)",
+        },
+      ],
+    },
+    {
+      "Maintain Healthy Skin, Hair and Nails": [
+        {
+          Skin: "Whole body collagen 1 scoop after meal",
+          Hair: "HSN complete- Take 4 capsules per day with meals",
+          Nail: "HSN complete- Take 4 capsules per day with meals",
+        },
+      ],
+    },
+    {
+      "Increase my Energy ": [
+        {
+          "In general, how are your energy levels?":
+            "Mito NR- Take 2 capsules per day with a meal Magnesium malate- 2 after meal",
+        },
+      ],
+    },
+    {
+      "Gut health issues": [
+        {
+          "I have had antibiotics in the past year or did frequently in the past? ":
+            "Therbiotic complete (keep refrigerated) 1 after meal",
+        },
+        {
+          "I often have gas and bloating":
+            " vitalzyme complete before each meal, 2nd priority- therbiotic complete (refigerate- 1 after any meal)",
+        },
+        {
+          "I often have indigestion (heartburn, nausea, belching, repearing of food)":
+            "vitalzyme complete- 1 before each meal and 2nd priority- Therbiotic complete (keep refrigerated) 1 after meal",
+        },
+      ],
+    },
+    {
+      "Get Restful Sleep":
+        "Insomnitol (1-2 capsules - 30 minutes before bed) and 2nd priority Trimag Supreme night 1/2 to 1 scoop 30 minutes before bed",
+    },
+  ]);
+
+  // Recommendations for General
+  await storeRecommendations("recommendations", "general", [
+    {
+      vitaminD: "Vitamin D recommendation",
+    },
+    {
+      doctorRecommendedIron: "Doctor recommended iron recommendation",
+    },
+  ]);
+
+  // Recommendations for Allergies
+  await storeRecommendations("recommendations", "menstrualCycle", [
+    {
+      "currently":
+        "Female, having mense: Complete Multi with Copper & Iron (Take 4 capsules per day (2 with each meal)) and OmegaAvail synergy (1 after any meal)",
+    },
+    {
+      "postMenopause":
+        "Female not having menses: Complete Multi without Copper & Iron (Take 4 capsules per day (2 with each meal)) and OmegaAvail synergy (1 after any meal)",
+    },
+    {
+      "noMenstruation":
+        "Female not having menses: Complete Multi without Copper & Iron (Take 4 capsules per day (2 with each meal)) and OmegaAvail synergy (1 after any meal)",
+    },
+    {
+      "pregnant":
+        "Multi will be- Prenatal pro- Take 4 capsules per day",
+    },
+    {
+      "tryingForBaby":
+        "Multi will be- Prenatal pro- Take 4 capsules per day",
+    },
+    {
+      "breastfeeding":
+        "Multi will be- Prenatal pro- Take 4 capsules per day",
+    },
+  ]);
+
+  //////
+  for (const condition of health_and_wellness) {
+    console.log('condition', condition);
+    console.log('dqe',Object.keys(condition)[0])
+    const conditionName = typeof condition ===object ? Object.keys(condition)[0] :condition;
+console.log('conditionName', conditionName);
+
+    const subtypes = condition[conditionName];
+console.log( 'subtypes',subtypes);
+
+
+const resultArray = [];
+
+
+    // Filter responses based on the condition
+    const conditionResponses =responses.find(obj => conditionName in obj)[conditionName]
+    console.log( 'condity',conditionResponses);
+
+    // Add filtered responses to the main array
+   if(typeof condition ===object){ if (conditionResponses.length > 0) {
+      conditionResponses.forEach(item=>{
+        subtypes.forEach(subtype => {
+          if (item[subtype]) {
+            filteredResponses.push( {[subtype]: item[subtype]});
+          }
+        })
+      })
+    }}
+    else{
+      filteredResponses.push({[conditionName]:conditionResponses})
+    }
+  }
+
+
+  /////////////////////////////////////
+  18-01
+
+  /* eslint-disable */
+
+const functions = require("firebase-functions");
+const admin = require("firebase-admin");
+
+admin.initializeApp();
+const storeRecommendations = async (collectionName, docId, recommendations) => {
+  const db = admin.firestore();
+  const docRef = db.collection(collectionName).doc(docId);
+
+  try {
+    await docRef.set({ responses: recommendations });
+    console.log(`Recommendations for ${docId} stored successfully!`);
+  } catch (error) {
+    console.error(`Error storing recommendations for ${docId}:`, error);
+  }
+};
+
+exports.storeRecommendations = functions.https.onRequest(
+  async (request, response) => {
+    try {
+      // Recommendations for Menstrual Cycle
+      await storeRecommendations("recommendations", "concerns", [
+        {
+          "Improve My General Health & Wellness":
+            "Male: twice daily (2 after breakfast) and omegaAvail synergy (1 after any meal)",
+        },
+        {
+          "Support My Immune system": [
+            {
+              "How often do you get colds?":
+                "Biofizz immune- 1 scoop after any meal",
+            },
+          ],
+        },
+        {
+          "Reduce Body Fat":
+            "Thermo-EFx™- Take 2 capsules per day (after meal)",
+        },
+        {
+          "Bone health":  "Osteoben- Take 4 capsules per day",
+        },
+        {
+          "Stress relief": [
+            {
+              "In general, how much stress do you have in life?":
+                "Adrenotone- 1 capsule after meal (twice a day) and 2nd priority- Magnesium glycinate complex (2 capsules per day)",
+            },
+          ],
+        },
+        {
+          "Maintain Healthy Skin, Hair and Nails": [
+            {
+              "Skin": "Whole body collagen 1 scoop after meal"}
+              ,
+              {"Hair": "HSN complete- Take 4 capsules per day with meals"},
+              {"Nail": "HSN complete- Take 4 capsules per day with meals"}
+            ,
+          ],
+        },
+        {
+          "Increase my Energy ": [
+            {
+              "In general, how are your energy levels?":
+                "Mito NR- Take 2 capsules per day with a meal Magnesium malate- 2 after meal",
+            },
+          ],
+        },
+        {
+          "Gut health issues": [
+            {
+              "I have had antibiotics in the past year or did frequently in the past? ":
+                "Therbiotic complete (keep refrigerated) 1 after meal",
+            },
+            {
+              "I often have gas and bloating":
+                " vitalzyme complete before each meal, 2nd priority- therbiotic complete (refigerate- 1 after any meal)",
+            },
+            {
+              "I often have indigestion (heartburn, nausea, belching, repearing of food)":
+                "vitalzyme complete- 1 before each meal and 2nd priority- Therbiotic complete (keep refrigerated) 1 after meal",
+            },
+          ],
+        },
+        {
+          "Get Restful Sleep":
+            "Insomnitol (1-2 capsules - 30 minutes before bed) and 2nd priority Trimag Supreme night 1/2 to 1 scoop 30 minutes before bed",
+        },
+      ]);
+      
+
+      response.status(200).send("Recommendations stored successfully!");
+    } catch (error) {
+      console.error("Error storing recommendations:", error);
+      response.status(500).send("Internal Server Error");
+    }
+  }
+);
+const getRecommendation = async (params) => {
+  const { age, gender, health_and_wellness, menstrual_cycle } = params;
+  const collectionName = "recommendations";
+  let docIds = [];
+
+  // Logic to determine the dynamic docId based on params
+  if (health_and_wellness) {
+    docIds.push("concerns");
+  }
+  if (menstrual_cycle) {
+    docIds.push("menstrual_Cycle");
+  }
+
+  const db = admin.firestore();
+  const recommendations = [];
+  // Iterate through each dynamic docId
+  for (const docId of docIds) {
+
+    const docRef = db.collection(collectionName).doc(docId);
+
+    try {
+      const doc = await docRef.get();
+      if (!doc.exists) {
+        console.error(`Document ${docId} not found.`);
+        continue; // Move to the next iteration if the document is not found
+      }
+
+      const data = doc.data();
+
+      const responses = data.responses || [];
+      const filteredResponses = [];
+
+      // Iterate through each condition
+      for (const condition of health_and_wellness) {
+        console.log('condition', condition);
+        console.log('dqe',Object.keys(condition)[0])
+        const conditionName = typeof condition ==="object" ? Object.keys(condition)[0] :condition;
+    console.log('conditionName', conditionName);
+    
+        const subtypes = condition[conditionName];
+    console.log( 'subtypes',subtypes);
+    
+    
+    const resultArray = [];
+    
+    
+        // Filter responses based on the condition
+        const conditionResponses =responses.find(obj => conditionName in obj)[conditionName]
+        console.log( 'condity',conditionResponses);
+    
+        // Add filtered responses to the main array
+       if(typeof condition ==="object"){ if (conditionResponses.length > 0) {
+          conditionResponses.forEach(item=>{
+            subtypes.forEach(subtype => {
+              if (item[subtype]) {
+                filteredResponses.push( {[subtype]: item[subtype]});
+              }
+            })
+          })
+        }}
+        else{
+          filteredResponses.push({[conditionName]:conditionResponses})
+        }
+      }
+
+      recommendations.push(...filteredResponses);
+    } catch (error) {
+      console.error(`Error getting recommendations for ${docId}:`, error);
+      return null;
+    }
+  }
+
+  return recommendations.length > 0 ? { responses: recommendations } : null;
+};
+
+
+
+
+
+
+
+
+exports.getRecommendation = functions.https.onRequest(
+  async (request, response) => {
+    try {
+      const { params } = request.body;
+      if (!params || !params.age || !params.gender) {
+        response.status(400).send("Bad Request: Missing required parameters.");
+        return;
+      }
+
+      const recommendations = await getRecommendation(params);
+
+      if (!recommendations) {
+        response.status(404).send("Recommendations not found.");
+        return;
+      }
+
+      response.status(200).json(recommendations);
+    } catch (error) {
+      console.error("Error getting recommendations:", error);
+      response.status(500).send("Internal Server Error");
+    }
+  }
+);
+
+{
+  "responses": [
+    { "question": "q1", "option": "option2" },
+     { "question": "q1.1", "option": "option3" },
+    { "question": "q2", "option": "option1" }
+   ],
+   "user_info": {
+
+   }
+}
+
+//////
+/* eslint-disable */
+
+const functions = require("firebase-functions");
+const admin = require("firebase-admin");
+
+admin.initializeApp();
+
+
+const getRecommendation = async () => {
+  const params = [
+    { "question": "q1", "option": "option2" },
+    { "question": "q1.1", "option": "option3" },
+   { "question": "q2", "option": "option1" }
+  ]    
+  const collectionName = "recommendations";
+  const db = admin.firestore();
+  const docRef = db.collection(collectionName)
+  try {
+    const snapshot = await docRef.get();
+    const questions = [];
+
+    snapshot.forEach((doc) => {
+      questions.push(
+      doc.data(),
+      );
+    });
+    console.log('first',questions)
+
+    return questions;
+  } catch (error) {
+    console.error('Error getting documents from questions collection:', error);
+    throw error;
+  }
+};
+
+
+getRecommendation()
+
+
+
+
+
+exports.getRecommendation = functions.https.onRequest(
+  async (request, response) => {
+    try {
+      const { params } = request.body;
+      if (!params || !params.age || !params.gender) {
+        response.status(400).send("Bad Request: Missing required parameters.");
+        return;
+      }
+
+      const recommendations = await getRecommendation(params);
+
+      if (!recommendations) {
+        response.status(404).send("Recommendations not found.");
+        return;
+      }
+
+      response.status(200).json(recommendations);
+    } catch (error) {
+      console.error("Error getting recommendations:", error);
+      response.status(500).send("Internal Server Error");
+    }
+  }
+);
+
+// const addQuestionToCollection = async (question, collectionName) => {
+//   const db = admin.firestore();
+//   const collectionRef = db.collection(collectionName);
+
+//   try {
+//     await collectionRef.doc(question.key).set(question);
+//     console.log(`Document ${question.key} added to ${collectionName} collection successfully!`);
+//   } catch (error) {
+//     console.error(`Error adding document to ${collectionName} collection:`, error);
+//     throw error;
+//   }
+// };
+
+
+
+const getAllQuestions = async () => {
+  const db = admin.firestore();
+  const collectionRef = db.collection('questions').doc('q1.1');
+ const dat6= await collectionRef.get()
+  console.log('qeq',dat6.data() )
+  try {
+    const snapshot = await collectionRef.get();
+    const questions = [];
+
+    snapshot.forEach((doc) => {
+      questions.push(
+      doc.data(),
+      );  
+    });
+
+    return questions;
+  } catch (error) {
+    console.error('Error getting documents from questions collection:', error);
+    throw error;
+  }
+};
+
+// // Example usage
+getAllQuestions()
+  .then((questions) => {
+    console.log('All Questions:', questions);
+  })
+  .catch((error) => {
+    console.error('Error:', error);
+  });
+  const addQuestionToCollection = async (question, collectionName) => {
+    const db = admin.firestore();
+    const collectionRef = db.collection(collectionName);
+  
+    try {
+      await collectionRef.doc(question.key).set(question);
+      console.log(`Document ${question.key} added to ${collectionName} collection successfully!`);
+    } catch (error) {
+      console.error(`Error adding document to ${collectionName} collection:`, error);
+      throw error;
+    }
+  };
+
+  exports.addQuestion = functions.https.onRequest(async (request, response) => {
+    try {
+      const { question, collectionName } = request.body;
+  
+      if (!question || !collectionName) {
+        response.status(400).send("Bad Request: Missing required parameters.");
+        return;
+      }
+  
+      await addQuestionToCollection(question, collectionName);
+      response.status(200).send(`Question added to ${collectionName} collection successfully!`);
+    } catch (error) {
+      console.error("Error adding question:", error);
+      response.status(500).send("Internal Server Error");
+    }
+  });
+  // Example usage for q1
+  const q1 = {
+    key: 'q1',
+    question: 'gender',
+    required: false,
+    options: [
+      {
+        nextQuestion: 'q2',
+        recommendation: null,
+        value: 'Male',
+        key: 'male'
+      },
+      {
+        nextQuestion: 'q1.1',
+        recommendation: null,
+        value: 'Female',
+        key: 'female'
+      },
+      {
+        nextQuestion: 'q2',
+        recommendation: null,
+        value: 'prefer not to say',
+        key: 'not_say'
+      }
+    ],
+    type: 'radio'
+  };
+  
+  // Example usage for q1.1
+  const q1_1 = {
+    key: 'q1.1',
+    question: 'How is your menstrual cycle?',
+    required: false,
+    options: [
+      {
+        nextQuestion: 'q2',
+        recommendation: 'recommendation1',
+        value: 'Currently menstruating',
+        key: 'option1'
+      },
+      {
+        nextQuestion: 'q2',
+        recommendation: 'recommendation2',
+        value: 'Post Menopause/ Hysterectomy',
+        key: 'option2'
+      },
+      {
+        nextQuestion: 'q2',
+        recommendation: 'recommendation2',
+        value: 'Not currently menstruating due to birth control etc',
+        key: 'option3'
+      },
+      {
+        nextQuestion: 'q2',
+        recommendation: 'recommendation3',
+        value: 'I am preganant',
+        key: 'option2'
+      },
+      {
+        nextQuestion: 'q2',
+        recommendation: 'recommendation3',
+        value: 'I am breastfeeding',
+        key: 'option2'
+      },
+      {
+        nextQuestion: 'q2',
+        recommendation: 'recommendation3',
+        value: 'I am trying for a baby',
+        key: 'option2'
+      }
+    ],
+    type: 'radio'
+  };
+  
+  // Add q1 to the "questions" collection
+  // addQuestionToCollection(q1, 'questions');
+  
+  // Add q1.1 to the "questions" collection
+  // addQuestionToCollection(q1_1, 'questions');
+
+  // const q1_1 = {
+  //   key: "recommendation1",
+  //   product_name: "DFH Multi with Copper & Iron",
+  //   descriotion:
+  //     "Female,having mense: Complete Multi with Copper & Iron (Take 4 capsules per day (2 with each meal)) and OmegaAvail synergy (1 after any meal)",
+  //   properties: {
+  //     non_vegetarian: false,
+  //     vegan: true,
+  //     Gluten_free: false,
+  //     Dairy_free: true,
+  //   },
+  //   link:'https://nutranourish.shop/products/dfh-complete-multi%E2%84%A2-with-copper-iron?_pos=2&_sid=c63b89984&_ss=r',
+  //   price: 29.99,
+  // };
+
+
+  [
+    {
+      userdetails:{
+        name:"user",
+        email:'email',
+      },
+      response:[
+        {question:"q1", answer:"option2"},
+        {question:"q1.1", answer:"option2"},
+        
+      ]
+    }
+  ]

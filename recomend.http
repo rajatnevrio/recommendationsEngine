@@ -1,0 +1,20 @@
+POST   http://127.0.0.1:5001/nutra-nourish/us-central1/addData
+Content-Type: application/json
+
+{
+"data":      {
+            "price": 0,
+            "link": "https://nutranourish.shop/products/hepatatone-plus%E2%84%A2?_pos=1&_sid=bbf699861&_ss=r",
+            "description": "Take 4 capsules per day- (Divided dosing recommended.)",
+            "product_name": "Hepatatone Plus",
+            "key": "recommendation37",
+            "properties": {
+              "Gluten_free": true,
+              "non_vegetarian": false,
+              "vegan": true,
+              "Dairy_free": true
+            }
+          },
+         
+"collectionName": "recommendations"
+}	

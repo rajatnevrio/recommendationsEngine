@@ -1,0 +1,2 @@
+GET   http://127.0.0.1:5001/nutra-nourish/us-central1/getAllQuestions
+Content-Type: application/json

@@ -1,0 +1,143 @@
+POST   http://127.0.0.1:5001/nutra-nourish/us-central1/addData
+Content-Type: application/json
+
+{
+"data":      {
+      "question": "Is there anything you're particularly concerned about or want to improve?",
+      "options": [
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation4",
+            "recommendation5"
+          ],
+          "value": "Improve My General Health & Wellness",
+          "key": "option1"
+        },
+        {
+          "nextQuestion": "q3.1",
+          "recommendation": null,
+          "value": "Support My Immune system",
+          "key": "option2"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation7"
+          ],
+          "value": "Reduce Body Fat",
+          "key": "option3"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation8"
+          ],
+          "value": "Bone health",
+          "key": "option4"
+        },
+        {
+          "nextQuestion": "q3.2",
+          "recommendation": null,
+          "value": "Stress relief",
+          "key": "option5"
+        },
+        {
+          "nextQuestion": "q3.3",
+          "recommendation": null,
+          "value": "Maintain Healthy Skin, Hair and Nails",
+          "key": "option6"
+        },
+          {
+          "nextQuestion": "q3.4",
+          "recommendation": null,
+          "value": "Increase my Energy ",
+          "key": "option7"
+        },
+{
+          "nextQuestion": "q3.5",
+          "recommendation": null,
+          "value": "Gut health issues",
+          "key": "option8"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": ["recommendation19","recommendation20"],
+          "value": "Get Restful Sleep",
+          "key": "option9"
+        },
+          {
+          "nextQuestion": "q4",
+          "recommendation": ["recommendation21","recommendation22"],
+          "value": "Improve Fitness performance (improve my workout)",
+          "key": "option10"
+        },
+          {
+          "nextQuestion": "q4",
+          "recommendation": ["recommendation23","recommendation24","recommendation25","recommendation26"],
+          "value": "Gain Lean Muscles mass",
+          "key": "option11"
+        },
+          {
+          "nextQuestion": "q4",
+          "recommendation": ["recommendation27"],
+          "value": "Joint health",
+          "key": "option12"
+        },
+         {
+          "nextQuestion": "q4",
+          "recommendation": ["recommendation28","recommendation29"],
+          "value": "Heart health",
+          "key": "option13"
+        },
+         {
+          "nextQuestion": "q4",
+          "recommendation": ["recommendation31","recommendation30"],
+          "value": "Support Brain Health (Focus, Memory, Concentration)",
+          "key": "option14"
+        },
+           
+           {
+          "nextQuestion": "q4",
+          "recommendation": ["recommendation32","recommendation10"],
+          "value": "Anxiety",
+          "key": "option15"
+        },
+              {
+          "nextQuestion": "q4",
+          "recommendation": ["recommendation34"],
+          "value": "Eye Health",
+          "key": "option16"
+        },
+              {
+          "nextQuestion": "q4",
+          "recommendation": ["recommendation35"],
+          "value": "Blood Sugar Control",
+          "key": "option17"
+        },
+             {
+          "nextQuestion": "q4",
+          "recommendation": ["recommendation10","recommendation33"],
+          "value": "Blood Pressure",
+          "key": "option18"
+        },
+               {
+          "nextQuestion": "q4",
+          "recommendation": ["recommendation36"],
+          "value": "Cholestrol",
+          "key": "option19"
+        },
+               {
+          "nextQuestion": "q4",
+          "recommendation": ["recommendation37"],
+          "value": "Liver Health/ Better Detox",
+          "key": "option20"
+        }
+      ],
+      "type": "multi_select",
+      "key": "q3",
+      "required": true
+    },
+         
+"collectionName": "questions"
+}	
