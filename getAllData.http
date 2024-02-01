@@ -1,2 +1,7 @@
-GET   http://127.0.0.1:5001/nutra-nourish/us-central1/getAllQuestions
+POST   https://us-central1-nutra-nourish.cloudfunctions.net/getAllQuestions
 Content-Type: application/json
+
+{
+   "collectionName": ""
+}
+ 

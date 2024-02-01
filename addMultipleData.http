@@ -1,0 +1,535 @@
+POST http://127.0.0.1:5001/nutra-nourish/us-central1/addMultipleData
+Content-Type: application/json
+
+{
+  "data":  [
+    {
+      "price": 29.99,
+      "link": "https://nutranourish.shop/products/dfh-complete-multi%E2%84%A2-with-copper-iron?_pos=2&_sid=c63b89984&_ss=r",
+      "descriotion": "Female,having mense: Complete Multi with Copper & Iron (Take 4 capsules per day (2 with each meal)) and OmegaAvail synergy (1 after any meal)",
+      "product_name": "DFH Multi with Copper & Iron",
+      "key": "recommendation1",
+      "properties": {
+        "Gluten_free": false,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 29.99,
+      "link": "link not provided",
+      "description": "2 capsules per day",
+      "product_name": "Magnesium glycinate complex",
+      "key": "recommendation10",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 29.99,
+      "link": "https://nutranourish.shop/products/whole-body-collagen?_pos=1&_sid=f4d006ec0&_ss=r",
+      "description": "1 scoop after meal",
+      "product_name": "Whole Body Collagen",
+      "key": "recommendation11",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 29.99,
+      "link": "https://nutranourish.shop/products/h-s-n-complete%E2%84%A2?_pos=3&_sid=047469274&_ss=r",
+      "description": "Take 4 capsules per day with meals",
+      "product_name": "HSN Complete",
+      "key": "recommendation12",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 29.99,
+      "link": "https://nutranourish.shop/products/mito-nr%E2%84%A2?_pos=1&_sid=bbfde8fe6&_ss=r",
+      "description": "Take 2 capsules per day with a meal",
+      "product_name": "Mito-NR™",
+      "key": "recommendation13",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": true,
+        "vegan": false,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 36,
+      "link": "https://nutranourish.shop/products/magnesium-malate?_pos=1&_sid=da8404329&_ss=r",
+      "description": "2 after meal",
+      "product_name": "Magnesium Malate",
+      "key": "recommendation14",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 58,
+      "link": "https://nutranourish.shop/products/vital-zymes-complete?_pos=1&_sid=db2d0bfdc&_ss=r",
+      "description": "before each meal",
+      "product_name": "therbiotic complete",
+      "key": "recommendation15",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 71,
+      "link": "https://nutranourish.shop/products/vital-zymes-complete?_pos=1&_sid=db2d0bfdc&_ss=r",
+      "description": "before each meal",
+      "product_name": "vitalzyme complete",
+      "key": "recommendation16",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 0,
+      "link": "Link not available",
+      "description": "(refrigerate- 1 capsule after any meal)",
+      "product_name": "Saccahromyces boulardii",
+      "key": "recommendation17",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 0,
+      "link": "Link not available",
+      "description": "Take 2 capsules with 8 ounces of water at bedtime",
+      "product_name": "Colon Rx",
+      "key": "recommendation18",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 68,
+      "link": "https://nutranourish.shop/products/insomnitol%E2%84%A2?_pos=2&_sid=3a1d376c8&_ss=r",
+      "description": "(1-2 capsules - 30 minutes before bed) ",
+      "product_name": "Insomnitol",
+      "key": "recommendation19",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 29.99,
+      "link": "https://nutranourish.shop/products/complete-multi%E2%84%A2?_pos=3&_sid=b69aed83a&_ss=r",
+      "descriotion": "Female not having menses: Complete Multi without Copper & Iron (Take 4 capsules per day (2 with each meal)) and OmegaAvail synergy (1 after any meal)",
+      "product_name": "DFH Multi (feee of copper and iron)",
+      "key": "recommendation2",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 0,
+      "link": "Link not available",
+      "description": "1/2 to 1 scoop 30 minutes before bed",
+      "product_name": "Insomnitol",
+      "key": "recommendation20",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 84,
+      "link": "https://nutranourish.shop/products/pretrain-nrg%E2%84%A2?_pos=1&_sid=318dab563&_ss=r",
+      "description": " (Mix 9 grams (approximately one scoop) in 8 ounces of water and consume 30 to 45 minutes before a workout)",
+      "product_name": "PreTrain NRG™",
+      "key": "recommendation21",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 95,
+      "link": "https://nutranourish.shop/collections/amino-acids/products/amino-acid-supreme%E2%84%A2s",
+      "description": "(Mix 12 grams (approximately one scoop) in 8 to 10 ounces of water per day)",
+      "product_name": "Amino Acid Supreme",
+      "key": "recommendation22",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 95,
+      "link": "Link not availaible",
+      "description": "Take 2 capsules per day, 2nd priority",
+      "product_name": "KreAlkalyn Pro",
+      "key": "recommendation23",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 0,
+      "link": "Link not availaible",
+      "description": "(if vegetarian or vegan Mix 29 to 34 grams (approximately one scoop) in 10 ounces of water)",
+      "product_name": "Phytotein",
+      "key": "recommendation24",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 0,
+      "link": "Link not availaible",
+      "description": "if non-veg and dairy free then Mix 27 grams (approximately one scoop) in 8 ounces of water",
+      "product_name": "PurePaleo",
+      "key": "recommendation25",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 0,
+      "link": "Link not availaible",
+      "description": "(If non-veg ) Mix 30 grams (approximately one scoop) in 8 ounces of water or any other beverage per day",
+      "product_name": "WheyCool ",
+      "key": "recommendation26",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 70,
+      "link": "https://nutranourish.shop/products/arthrosoothe%E2%84%A2?_pos=1&_sid=6154e0f03&_ss=r",
+      "description": "Take 4 capsules per day with meals (Divided dosing recommended.)",
+      "product_name": "Arthrosoothe ",
+      "key": "recommendation27",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 0,
+      "link": "Link not available",
+      "description": " (instread of omegaavail synergy) (1 after any meal)",
+      "product_name": "OmegaAvail Hipo ",
+      "key": "recommendation28",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 0,
+      "link": "Link not available",
+      "description": "(Mix 5 grams (approximately 1 scoop) of powder mixed in 8 ounces of water)",
+      "product_name": "TriMag Supreme",
+      "key": "recommendation29",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 29.99,
+      "link": "https://nutranourish.shop/products/prenatal-pro%E2%84%A2-essential-packets?_pos=1&_sid=1287a7d57&_ss=r",
+      "descriotion": "Multi will be- Prenatal pro- Take 4 capsules per day",
+      "product_name": " Prenatal pro",
+      "key": "recommendation3",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": true,
+        "vegan": false,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 88,
+      "link": "https://nutranourish.shop/products/neuromag%E2%84%A2?_pos=1&_sid=56acfcc8c&_ss=r",
+      "description": "(Take 3 capsules after meals per day)",
+      "product_name": "Neuromag",
+      "key": "recommendation30",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 0,
+      "link": "https://nutranourish.shop/products/omegavail%E2%84%A2-synergy?_pos=1&_sid=bf8ccad35&_ss=r",
+      "description": "(1 after any meal)",
+      "product_name": "OmegaAvail synergy",
+      "key": "recommendation31",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 52,
+      "link": "https://nutranourish.shop/products/neuromag%E2%84%A2?_pos=1&_sid=56acfcc8c&_ss=r",
+      "description": "After any meal take 2 mL (approximately 4 pumps) and hold in mouth for 30 seconds before swallowing. 1-2 times a day.",
+      "product_name": "Liposomal Neurocalm",
+      "key": "recommendation32",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 83,
+      "link": "https://nutranourish.shop/products/htn-supreme%E2%84%A2?_pos=1&_sid=e3a901793&_ss=r",
+      "description": " Take 4 capsules per day (Divided dosing recommended)",
+      "product_name": " HTN supreme",
+      "key": "recommendation33",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 0,
+      "link": "https://nutranourish.shop/products/ocuforce%E2%84%A2?_pos=1&_sid=c0f14bded&_ss=r",
+      "description": "Take 2 capsules per day with meals",
+      "product_name": "Ocuforce",
+      "key": "recommendation34",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 91,
+      "link": "https://nutranourish.shop/products/glucosupreme%E2%84%A2-herbal?_pos=1&_sid=00957a5b1&_ss=r",
+      "description": "Take 4 capsules per day with meals (divided dosing recommended)",
+      "product_name": "Glucosupreme Herbal",
+      "key": "recommendation35",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 79,
+      "link": "https://nutranourish.shop/products/lipotrienols-ryr%E2%84%A2?_pos=1&_sid=e9201b729&_ss=r",
+      "description": "Take 2 capsules per day in the evening with food. For best results, do not take within 6 hours of taking a vitamin E supplement containing D-alpha-tocopherol",
+      "product_name": "Lipotrienols RYR",
+      "key": "recommendation36",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 0,
+      "link": "https://nutranourish.shop/products/hepatatone-plus%E2%84%A2?_pos=1&_sid=bbf699861&_ss=r",
+      "description": "Take 4 capsules per day- (Divided dosing recommended.)",
+      "product_name": "Hepatatone Plus",
+      "key": "recommendation37",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 28,
+      "link": "https://nutranourish.shop/products/ferrochel%C2%AE-iron-chelate?_pos=2&_sid=3b7c6d8aa&_ss=r",
+      "description": "Take 1 capsule per day with a meal",
+      "product_name": "Ferrochel",
+      "key": "recommendation39",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "condition": {
+        "gender": "Male"
+      },
+      "price": 29.99,
+      "link": "https://nutranourish.shop/products/twice-daily-multi%E2%84%A2?_pos=5&_sid=c5ed6abc6&_ss=r",
+      "description": "twice daily (2 after breakfast)",
+      "product_name": "Twice Daily Mutli",
+      "key": "recommendation4",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 85,
+      "link": "https://nutranourish.shop/products/histaeze%E2%84%A2?_pos=1&_sid=74d73797a&_ss=r",
+      "description": "Take 4 capsules per day (Divided dosing recommended)",
+      "product_name": "Histease",
+      "key": "recommendation40",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 35,
+      "link": "Link not provided",
+      "description": "Mix 10 grams (approximately one scoop) in water per day",
+      "product_name": "Essential green",
+      "key": "recommendation41",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "condition": {
+        "gender": "Male"
+      },
+      "price": 29.99,
+      "link": "https://nutranourish.shop/products/omegavail%E2%84%A2-synergy?_pos=1&_sid=bf8ccad35&_ss=r",
+      "description": "1 after any meal",
+      "product_name": "OmegaAvail Synergy",
+      "key": "recommendation5",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "condition": null,
+      "price": 29.99,
+      "link": "https://nutranourish.shop/products/biofizz%E2%84%A2-immune?_pos=1&_sid=6bde1accb&_ss=r",
+      "description": "1scoop after any meal",
+      "product_name": "Biofizz immune",
+      "key": "recommendation6",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 29.99,
+      "link": "https://nutranourish.shop/products/thermo-efx%E2%84%A2?_pos=3&_sid=5b6bb77a4&_ss=r",
+      "description": "",
+      "product_name": "Thermo-EFx™",
+      "key": "recommendation7",
+      "properties": {
+        "Gluten_free": false,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 29.99,
+      "link": "https://nutranourish.shop/products/osteoben%C2%AE?_pos=1&_sid=97a4267d1&_ss=r",
+      "descriotion": "Take 4 capsules per day",
+      "product_name": "Osteoben",
+      "key": "recommendation8",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    },
+    {
+      "price": 29.99,
+      "link": "https://nutranourish.shop/products/adrenotone%E2%84%A2-90-vegetarian-capsules?_pos=1&_sid=84452aa2d&_ss=r",
+      "description": "1 capsule after meal (twice a day)",
+      "product_name": "DFH Multi with Copper & Iron",
+      "key": "recommendation9",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      }
+    }
+  ],
+  "collectionName": "recommendations"
+}

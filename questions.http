@@ -1,0 +1,771 @@
+POST https://us-central1-nutra-nourish.cloudfunctions.net/addMultipleData
+Content-Type: application/json
+
+{
+  "data":  [
+
+    {
+      "question": "Are you male or female?",
+      "options": [
+        {
+          "nextQuestion": "q2",
+          "recommendation": null,
+          "value": "Male",
+          "key": "option1"
+        },
+        {
+          "nextQuestion": "q1.1",
+          "recommendation": null,
+          "value": "Female",
+          "key": "option2"
+        }
+      ],
+      "type": "single_select",
+      "key": "q1",
+      "required": true
+    },
+    {
+      "question": "How is your menstrual cycle?",
+      "options": [
+        {
+          "nextQuestion": "q2",
+          "recommendation": [
+            "recommendation1"
+          ],
+          "value": "Currently menstruating",
+          "key": "option1"
+        },
+        {
+          "nextQuestion": "q2",
+          "recommendation": [
+            "recommendation2"
+          ],
+          "value": "Post Menopause/ Hysterectomy",
+          "key": "option2"
+        },
+        {
+          "nextQuestion": "q2",
+          "recommendation": [
+            "recommendation2"
+          ],
+          "value": "Not currently menstruating due to birth control etc",
+          "key": "option3"
+        },
+        {
+          "nextQuestion": "q2",
+          "recommendation": [
+            "recommendation3"
+          ],
+          "value": "I am pregnant",
+          "key": "option4"
+        },
+        {
+          "nextQuestion": "q2",
+          "recommendation": [
+            "recommendation3"
+          ],
+          "value": "I am breastfeeding",
+          "key": "option5"
+        },
+        {
+          "nextQuestion": "q2",
+          "recommendation": [
+            "recommendation3"
+          ],
+          "value": "I am trying for a baby",
+          "key": "option6"
+        }
+      ],
+      "type": "single_select",
+      "key": "q1.1",
+      "required": false
+    },
+    {
+      "question": "How often do you smoke cigarettes?",
+      "options": [
+        {
+          "nextQuestion": "q11",
+          "recommendation": null,
+          "value": "None",
+          "key": "option1"
+        },
+        {
+          "nextQuestion": "q11",
+          "recommendation": null,
+          "value": "Seldom",
+          "key": "option2"
+        },
+        {
+          "nextQuestion": "q11",
+          "recommendation": null,
+          "value": "Less than 10 a day",
+          "key": "option3"
+        },
+        {
+          "nextQuestion": "q11",
+          "recommendation": null,
+          "value": "More than 10 a day",
+          "key": "option3"
+        }
+      ],
+      "type": "single_select",
+      "key": "q10",
+      "required": true
+    },
+    {
+      "question": "Are you on any restrictive diets?",
+      "options": [
+        {
+          "nextQuestion": "q12",
+          "recommendation": null,
+          "value": "No",
+          "key": "option1"
+        },
+        {
+          "nextQuestion": "q12",
+          "recommendation": null,
+          "value": "Vegetarian",
+          "key": "option2"
+        },
+        {
+          "nextQuestion": "q12",
+          "recommendation": null,
+          "value": "Vegan",
+          "key": "option3"
+        },
+        {
+          "nextQuestion": "q12",
+          "recommendation": null,
+          "value": "Gluten-free",
+          "key": "option4"
+        },
+        {
+          "nextQuestion": "q12",
+          "recommendation": null,
+          "value": "Dairy-free",
+          "key": "option5"
+        }
+      ],
+      "type": "multi_select",
+      "key": "q11",
+      "required": true
+    },
+    {
+      "question": "How many portions of fruit and veg do you eat everyday?",
+      "options": [
+        {
+          "nextQuestion": "q13",
+          "recommendation": null,
+          "value": "None",
+          "key": "option1"
+        },
+        {
+          "nextQuestion": "q13",
+          "recommendation": [
+            "recommendation41"
+          ],
+          "value": "1-2",
+          "key": "option2"
+        },
+        {
+          "nextQuestion": "q13",
+          "recommendation": null,
+          "value": "3-5",
+          "key": "option3"
+        },
+        {
+          "nextQuestion": "q13",
+          "recommendation": null,
+          "value": "5+",
+          "key": "option4"
+        }
+      ],
+      "type": "single_select",
+      "key": "q12",
+      "required": true
+    },
+    {
+      "question": "How many units of alcohol do you drink in an average week?(1 shot of spirit is 1 unit, a medium glass of wine or pint of beer is approximately 2 units)",
+      "options": [
+        {
+          "nextQuestion": "q14",
+          "recommendation": null,
+          "value": "None",
+          "key": "option1"
+        },
+        {
+          "nextQuestion": "q14",
+          "recommendation": null,
+          "value": "1-5",
+          "key": "option2"
+        },
+        {
+          "nextQuestion": "q14",
+          "recommendation": [
+            "recommendation44"
+          ],
+          "value": "6-10",
+          "key": "option3"
+        },
+        {
+          "nextQuestion": "q14",
+          "recommendation": [
+            "recommendation44"
+          ],
+          "value": "11 or more",
+          "key": "option4"
+        }
+      ],
+      "type": "single_select",
+      "key": "q13",
+      "required": true
+    },
+    {
+      "question": "Do you take any prescription medications?",
+      "options": [
+        {
+          "nextQuestion": null,
+          "message": {
+            "disclaimer": "You mentioned that you are on prescription medicines, some vitamins and/or supplements may not be right for you. Read the label and any warnings before purchase. We recommend consulting your health professional before starting a vitamin and supplement routine. Reach out to our friendly team if you consider adding other supplements to your pack, so they can check for you, email admin@nutranourish.com or +6591257500"
+          },
+          "recommendation":null,
+          "value": "Yes",
+          "key": "option1"
+        },
+        {
+          "nextQuestion": null,
+          "recommendation": null,
+          "value": "No",
+          "key": "option2"
+        }
+      ],
+      "type": "single_select",
+      "key": "q14",
+      "required": true
+    },
+    {
+      "question": "How old are you?",
+      "options": [
+        {
+          "nextQuestion": "q3",
+          "recommendation": null,
+          "value": "Age",
+          "key": "age"
+        }
+      ],
+      "type": "input",
+      "key": "q2",
+      "required": true
+    },
+    {
+      "question": "Is there anything you're particularly concerned about or want to improve?",
+      "options": [
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation4",
+            "recommendation5"
+          ],
+          "value": "Improve My General Health & Wellness",
+          "key": "option1"
+        },
+        {
+          "nextQuestion": "q3.1",
+          "recommendation": null,
+          "value": "Support My Immune system",
+          "key": "option2"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation7"
+          ],
+          "value": "Reduce Body Fat",
+          "key": "option3"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation8"
+          ],
+          "value": "Bone health",
+          "key": "option4"
+        },
+        {
+          "nextQuestion": "q3.2",
+          "recommendation": null,
+          "value": "Stress relief",
+          "key": "option5"
+        },
+        {
+          "nextQuestion": "q3.3",
+          "recommendation": null,
+          "value": "Maintain Healthy Skin, Hair and Nails",
+          "key": "option6"
+        },
+        {
+          "nextQuestion": "q3.4",
+          "recommendation": null,
+          "value": "Increase my Energy ",
+          "key": "option7"
+        },
+        {
+          "nextQuestion": "q3.5",
+          "recommendation": null,
+          "value": "Gut health issues",
+          "key": "option8"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation19",
+            "recommendation20"
+          ],
+          "value": "Get Restful Sleep",
+          "key": "option9"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation21",
+            "recommendation22"
+          ],
+          "value": "Improve Fitness performance (improve my workout)",
+          "key": "option10"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation23",
+            "recommendation24",
+            "recommendation25",
+            "recommendation26"
+          ],
+          "value": "Gain Lean Muscles mass",
+          "key": "option11"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation27"
+          ],
+          "value": "Joint health",
+          "key": "option12"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation28",
+            "recommendation29"
+          ],
+          "value": "Heart health",
+          "key": "option13"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation31",
+            "recommendation30"
+          ],
+          "value": "Support Brain Health (Focus, Memory, Concentration)",
+          "key": "option14"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation32",
+            "recommendation10"
+          ],
+          "value": "Anxiety",
+          "key": "option15"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation34"
+          ],
+          "value": "Eye Health",
+          "key": "option16"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation35"
+          ],
+          "value": "Blood Sugar Control",
+          "key": "option17"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation10",
+            "recommendation33"
+          ],
+          "value": "Blood Pressure",
+          "key": "option18"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation36"
+          ],
+          "value": "Cholestrol",
+          "key": "option19"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation37"
+          ],
+          "value": "Liver Health/ Better Detox",
+          "key": "option20"
+        }
+      ],
+      "type": "multi_select",
+      "key": "q3",
+      "required": true
+    },
+    {
+      "question": "How often do you get colds/ other infections?",
+      "options": [
+        {
+          "nextQuestion": "q4",
+          "recommendation": null,
+          "value": "Rarely",
+          "key": "option1"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation6"
+          ],
+          "value": "2-3 times a year",
+          "key": "option2"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation6"
+          ],
+          "value": "More than 4 times a year",
+          "key": "option3"
+        }
+      ],
+      "type": "single_select",
+      "key": "q3.1",
+      "required": true
+    },
+    {
+      "question": "In general, how much stress do you have in life?",
+      "options": [
+        {
+          "nextQuestion": "q4",
+          "recommendation": null,
+          "value": "None",
+          "key": "option1"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation9",
+            "recommendation10"
+          ],
+          "value": "Mild / sometimes",
+          "key": "option2"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation9",
+            "recommendation10"
+          ],
+          "value": "Moderate/ Often",
+          "key": "option3"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation9",
+            "recommendation10"
+          ],
+          "value": "Severe/ Constant",
+          "key": "option4"
+        }
+      ],
+      "type": "single_select",
+      "key": "q3.2",
+      "required": true
+    },
+    {
+      "question": "Maintain Healthy Skin, Hair and Nails",
+      "options": [
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation11"
+          ],
+          "value": "skin",
+          "key": "option1"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation12"
+          ],
+          "value": "Hair",
+          "key": "option2"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation12"
+          ],
+          "value": "Nails",
+          "key": "option3"
+        }
+      ],
+      "type": "multi_select",
+      "key": "q3.3",
+      "required": true
+    },
+    {
+      "question": "In general, how are your energy levels?",
+      "options": [
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation14",
+            "recommendation13"
+          ],
+          "value": "Very Low",
+          "key": "option1"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation14",
+            "recommendation13"
+          ],
+          "value": "Low",
+          "key": "option2"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation14",
+            "recommendation13"
+          ],
+          "value": "Moderate",
+          "key": "option3"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": null,
+          "value": "High",
+          "key": "option3"
+        }
+      ],
+      "type": "single_select",
+      "key": "q3.4",
+      "required": true
+    },
+    {
+      "question": "Gut health issues",
+      "options": [
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation15"
+          ],
+          "value": "I have had antibiotics in the past year or did frequently in the past? ",
+          "key": "option1"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation16",
+            "recommendation15"
+          ],
+          "value": "I often have gas and bloating",
+          "key": "option2"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation15",
+            "recommendation16"
+          ],
+          "value": "I often have indigestion",
+          "key": "option3"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation17"
+          ],
+          "value": "I frequenty have diarrhea or soft stools - Diarrhoea",
+          "key": "option4"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": [
+            "recommendation15",
+            "recommendation18"
+          ],
+          "value": "I often deal with constipation",
+          "key": "option5"
+        },
+        {
+          "nextQuestion": "q4",
+          "recommendation": null,
+          "value": "None of the above",
+          "key": "option3"
+        }
+      ],
+      "type": "multi_select",
+      "key": "q3.5",
+      "required": true
+    },
+    {
+      "question": "Has your doctor recommended to take vitamin D?",
+      "options": [
+        {
+          "nextQuestion": "q5",
+          "recommendation": [
+            "recommendation42"
+          ],
+          "value": "Yes",
+          "key": "option1"
+        },
+        {
+          "nextQuestion": "q5",
+          "recommendation": null,
+          "value": "No",
+          "key": "option2"
+        }
+      ],
+      "type": "single_select",
+      "key": "q4",
+      "required": false
+    },
+    {
+      "question": "Has your doctor recommended to take iron?",
+      "options": [
+        {
+          "nextQuestion": "q6",
+          "recommendation": [
+            "recommendation39"
+          ],
+          "value": "Yes",
+          "key": "option1"
+        },
+        {
+          "nextQuestion": "q6",
+          "recommendation": null,
+          "value": "No",
+          "key": "option2"
+        }
+      ],
+      "type": "single_select",
+      "key": "q5",
+      "required": false
+    },
+    {
+      "question": "Do you frequently suffer from Seasonal Allergies?",
+      "options": [
+        {
+          "nextQuestion": "q7",
+          "recommendation": [
+            "recommendation40"
+          ],
+          "value": "Yes",
+          "key": "option1"
+        },
+        {
+          "nextQuestion": "q7",
+          "recommendation": null,
+          "value": "No",
+          "key": "option2"
+        }
+      ],
+      "type": "single_select",
+      "key": "q6",
+      "required": false
+    },
+    {
+      "question": "How much would you like to spend on your supplements per month?",
+      "options": [
+        {
+          "nextQuestion": "q8",
+          "recommendation": null,
+          "value": "budget",
+          "key": "budget"
+        }
+      ],
+      "type": "input",
+      "key": "q7",
+      "required": true
+    },
+    {
+      "question": "How much water do you drink per day?",
+      "options": [
+        {
+          "nextQuestion": "q9",
+          "recommendation": null,
+          "value": "5 or fewer 8Oz glasses per day",
+          "key": "option1"
+        },
+        {
+          "nextQuestion": "q9",
+          "recommendation": null,
+          "value": "6-7 glasses per day",
+          "key": "option2"
+        },
+        {
+          "nextQuestion": "q9",
+          "recommendation": null,
+          "value": "8+ glasses per day",
+          "key": "option3"
+        }
+      ],
+      "type": "single_select",
+      "key": "q8",
+      "required": false
+    },
+    {
+      "question": "How many hours do you exercise a week?",
+      "options": [
+        {
+          "nextQuestion": "q10",
+          "recommendation": null,
+          "value": "I don't exercise",
+          "key": "option1"
+        },
+        {
+          "nextQuestion": "q10",
+          "recommendation": null,
+          "value": "1-2 hours a week",
+          "key": "option2"
+        },
+        {
+          "nextQuestion": "q10",
+          "recommendation": null,
+          "value": "3-5 hours a week",
+          "key": "option3"
+        },
+        {
+          "nextQuestion": "q10",
+          "recommendation": null,
+          "value": ">5 hours a week",
+          "key": "option3"
+        }
+      ],
+      "type": "single_select",
+      "key": "q9",
+      "required": true
+    }
+  ],
+
+
+  "collectionName": "questions"
+}

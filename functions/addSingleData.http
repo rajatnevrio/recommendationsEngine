@@ -1,0 +1,22 @@
+POST  http://127.0.0.1:5001/nutra-nourish/us-central1/addSingleData
+Content-Type: application/json
+
+{
+  "data":        
+      {
+    "question": "How much would you like to spend on your supplements per month?",
+    "options": [
+      {
+        "nextQuestion": "q9",
+        "recommendation": null,
+        "value": "budget",
+        "key": "budget"
+      }
+    ],
+    "type": "input",
+    "key": "q8",
+    "required": true
+  },
+  
+  "collectionName": "questions"
+}

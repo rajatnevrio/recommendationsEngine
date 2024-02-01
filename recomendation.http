@@ -1,8 +1,15 @@
-"questions": [
+POST https://us-central1-nutra-nourish.cloudfunctions.net/addMultipleData
+Content-Type: application/json
+
+{
+  "data":  [
     {
       "price": 29.99,
+      "condition": {
+        "gender": "Female"
+      },
       "link": "https://nutranourish.shop/products/dfh-complete-multi%E2%84%A2-with-copper-iron?_pos=2&_sid=c63b89984&_ss=r",
-      "descriotion": "Female,having mense: Complete Multi with Copper & Iron (Take 4 capsules per day (2 with each meal)) and OmegaAvail synergy (1 after any meal)",
+      "description": "Female,having mense: Complete Multi with Copper & Iron (Take 4 capsules per day (2 with each meal)) and OmegaAvail synergy (1 after any meal)",
       "product_name": "DFH Multi with Copper & Iron",
       "key": "recommendation1",
       "properties": {
@@ -10,7 +17,8 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+      "priority":1
     },
     {
       "price": 29.99,
@@ -23,7 +31,8 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":0
     },
     {
       "price": 29.99,
@@ -36,7 +45,8 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":1
     },
     {
       "price": 29.99,
@@ -49,7 +59,8 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":1
     },
     {
       "price": 29.99,
@@ -62,10 +73,11 @@
         "non_vegetarian": true,
         "vegan": false,
         "Dairy_free": true
-      }
+      },
+       "priority":1
     },
     {
-      "price": 2300,
+      "price": 36,
       "link": "https://nutranourish.shop/products/magnesium-malate?_pos=1&_sid=da8404329&_ss=r",
       "description": "2 after meal",
       "product_name": "Magnesium Malate",
@@ -75,23 +87,25 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":0
     },
     {
-      "price": 2300,
-      "link": "https://nutranourish.shop/products/ther-biotic%C2%AE-complete-1?_pos=1&_sid=167f808a0&_ss=r",
-      "description": "(keep refrigerated) 1 after meal",
-      "product_name": "therbiotic complete ",
+      "price": 58,
+      "link": "https://nutranourish.shop/products/vital-zymes-complete?_pos=1&_sid=db2d0bfdc&_ss=r",
+      "description": "before each meal",
+      "product_name": "therbiotic complete",
       "key": "recommendation15",
       "properties": {
         "Gluten_free": true,
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":1
     },
     {
-      "price": 2300,
+      "price": 71,
       "link": "https://nutranourish.shop/products/vital-zymes-complete?_pos=1&_sid=db2d0bfdc&_ss=r",
       "description": "before each meal",
       "product_name": "vitalzyme complete",
@@ -101,10 +115,11 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":1
     },
     {
-      "price": 2300,
+      "price": 0,
       "link": "Link not available",
       "description": "(refrigerate- 1 capsule after any meal)",
       "product_name": "Saccahromyces boulardii",
@@ -114,11 +129,12 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":1
     },
     {
-      "price": 2300,
-      "link": "Link not available",
+      "price": 38.00,
+      "link": "https://nutranourish.shop/products/colon-rx%E2%84%A2",
       "description": "Take 2 capsules with 8 ounces of water at bedtime",
       "product_name": "Colon Rx",
       "key": "recommendation18",
@@ -127,7 +143,8 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":1
     },
     {
       "price": 68,
@@ -140,10 +157,14 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":1
     },
     {
       "price": 29.99,
+      "condition": {
+        "gender": "Female"
+      },
       "link": "https://nutranourish.shop/products/complete-multi%E2%84%A2?_pos=3&_sid=b69aed83a&_ss=r",
       "descriotion": "Female not having menses: Complete Multi without Copper & Iron (Take 4 capsules per day (2 with each meal)) and OmegaAvail synergy (1 after any meal)",
       "product_name": "DFH Multi (feee of copper and iron)",
@@ -153,20 +174,22 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":1
     },
     {
-      "price": 0,
-      "link": "Link not available",
+      "price": 77.20,
+      "link": " https://nutranourish.shop/products/trimag-supreme%E2%84%A2-night",
       "description": "1/2 to 1 scoop 30 minutes before bed",
-      "product_name": "Insomnitol",
+      "product_name": "Trimag Supreme night",
       "key": "recommendation20",
       "properties": {
         "Gluten_free": true,
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":0
     },
     {
       "price": 84,
@@ -179,7 +202,8 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":1
     },
     {
       "price": 95,
@@ -192,12 +216,13 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":0
     },
     {
-      "price": 95,
-      "link": "Link not availaible",
-      "description": "Take 2 capsules per day, 2nd priority",
+      "price":  50.00,
+      "link": "https://nutranourish.shop/products/krealkalyn-pro",
+      "description": "Take 2 capsules per day",
       "product_name": "KreAlkalyn Pro",
       "key": "recommendation23",
       "properties": {
@@ -205,11 +230,12 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+     "priority":1
     },
     {
-      "price": 0,
-      "link": "Link not availaible",
+      "price":  69.00,
+      "link": "https://nutranourish.shop/products/phytotein%E2%84%A2",
       "description": "(if vegetarian or vegan Mix 29 to 34 grams (approximately one scoop) in 10 ounces of water)",
       "product_name": "Phytotein",
       "key": "recommendation24",
@@ -218,11 +244,12 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+             "priority":0
     },
     {
-      "price": 0,
-      "link": "Link not availaible",
+      "price": 115.00,
+      "link": "https://nutranourish.shop/products/purepaleo%E2%84%A2",
       "description": "if non-veg and dairy free then Mix 27 grams (approximately one scoop) in 8 ounces of water",
       "product_name": "PurePaleo",
       "key": "recommendation25",
@@ -231,11 +258,12 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":0
     },
     {
-      "price": 0,
-      "link": "Link not availaible",
+      "price":  141.00,
+      "link": "https://nutranourish.shop/products/wheymeal%E2%84%A2",
       "description": "(If non-veg ) Mix 30 grams (approximately one scoop) in 8 ounces of water or any other beverage per day",
       "product_name": "WheyCool ",
       "key": "recommendation26",
@@ -244,7 +272,8 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":0
     },
     {
       "price": 70,
@@ -257,12 +286,13 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":1
     },
     {
-      "price": 0,
-      "link": "Link not available",
-      "description": " (instread of omegaavail synergy) (1 after any meal)",
+      "price": 55.00,
+      "link": "https://nutranourish.shop/products/omegavail%E2%84%A2-hi-po",
+      "description": "(instread of omegaavail synergy) (1 after any meal)",
       "product_name": "OmegaAvail Hipo ",
       "key": "recommendation28",
       "properties": {
@@ -270,11 +300,12 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":1
     },
     {
-      "price": 0,
-      "link": "Link not available",
+      "price": 77.20,
+      "link": "https://nutranourish.shop/products/trimag-supreme%E2%84%A2-night",
       "description": "(Mix 5 grams (approximately 1 scoop) of powder mixed in 8 ounces of water)",
       "product_name": "TriMag Supreme",
       "key": "recommendation29",
@@ -283,10 +314,14 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":0
     },
     {
       "price": 29.99,
+      "condition": {
+        "gender": "Female"
+      },
       "link": "https://nutranourish.shop/products/prenatal-pro%E2%84%A2-essential-packets?_pos=1&_sid=1287a7d57&_ss=r",
       "descriotion": "Multi will be- Prenatal pro- Take 4 capsules per day",
       "product_name": " Prenatal pro",
@@ -296,7 +331,8 @@
         "non_vegetarian": true,
         "vegan": false,
         "Dairy_free": true
-      }
+      },
+       "priority":1
     },
     {
       "price": 88,
@@ -309,7 +345,8 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":0
     },
     {
       "price": 0,
@@ -322,7 +359,8 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":1
     },
     {
       "price": 52,
@@ -335,7 +373,8 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":1
     },
     {
       "price": 83,
@@ -348,7 +387,8 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+      "priority":1
     },
     {
       "price": 0,
@@ -361,7 +401,8 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":1
     },
     {
       "price": 91,
@@ -374,7 +415,8 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+      "priority":1
     },
     {
       "price": 79,
@@ -387,7 +429,8 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+      "priority":1
     },
     {
       "price": 0,
@@ -400,7 +443,22 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+      "priority":1
+    },
+    {
+      "price": 28,
+      "link": "https://nutranourish.shop/products/ferrochel%C2%AE-iron-chelate?_pos=2&_sid=3b7c6d8aa&_ss=r",
+      "description": "Take 1 capsule per day with a meal",
+      "product_name": "Ferrochel",
+      "key": "recommendation39",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      },
+      "priority":1
     },
     {
       "condition": {
@@ -411,6 +469,34 @@
       "description": "twice daily (2 after breakfast)",
       "product_name": "Twice Daily Mutli",
       "key": "recommendation4",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      },
+       "priority":1
+    },
+    {
+      "price": 85,
+      "link": "https://nutranourish.shop/products/histaeze%E2%84%A2?_pos=1&_sid=74d73797a&_ss=r",
+      "description": "Take 4 capsules per day (Divided dosing recommended)",
+      "product_name": "Histease",
+      "key": "recommendation40",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      },
+      "priority":1
+    },
+    {
+      "price": 93.00,
+      "link": "https://nutranourish.shop/products/essentiagreens%E2%84%A2",
+      "description": "Mix 10 grams (approximately one scoop) in water per day",
+      "product_name": "Essential green",
+      "key": "recommendation41",
       "properties": {
         "Gluten_free": true,
         "non_vegetarian": false,
@@ -432,7 +518,8 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":0
     },
     {
       "condition": null,
@@ -446,7 +533,8 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":1
     },
     {
       "price": 29.99,
@@ -459,7 +547,8 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":1
     },
     {
       "price": 29.99,
@@ -472,7 +561,36 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":1
+    },
+       {
+      "price": 78.00,
+      "link": "https://nutranourish.shop/products/liposomal-d-supreme",
+      "descriotion": "Take 0.5 mL (approximately 1 pump) and hold in mouth for 30 seconds before swallowing",
+      "product_name": "Liposomal D supreme",
+      "key": "recommendation42",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      },
+       "priority":1
+    },
+        {
+      "price": 65.00,
+      "link": "https://nutranourish.shop/products/liposomal-glutathione",
+      "descriotion": "Take 1 mL (approximately 2 pumps) and hold in mouth for 30 seconds before swallowing ) after any meal",
+      "product_name": "Liposomal glutathione",
+      "key": "recommendation44",
+      "properties": {
+        "Gluten_free": true,
+        "non_vegetarian": false,
+        "vegan": true,
+        "Dairy_free": true
+      },
+       "priority":0
     },
     {
       "price": 29.99,
@@ -485,7 +603,9 @@
         "non_vegetarian": false,
         "vegan": true,
         "Dairy_free": true
-      }
+      },
+       "priority":1
     }
-  ]
+  ],
+  "collectionName": "recommendations"
 }

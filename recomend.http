@@ -1,13 +1,13 @@
-POST   http://127.0.0.1:5001/nutra-nourish/us-central1/addData
+POST   http://127.0.0.1:5001/nutra-nourish/us-central1/addSingleData
 Content-Type: application/json
 
 {
 "data":      {
-            "price": 0,
-            "link": "https://nutranourish.shop/products/hepatatone-plus%E2%84%A2?_pos=1&_sid=bbf699861&_ss=r",
-            "description": "Take 4 capsules per day- (Divided dosing recommended.)",
-            "product_name": "Hepatatone Plus",
-            "key": "recommendation37",
+            "price": 35,
+            "link": "Link not provided",
+            "description": "Mix 10 grams (approximately one scoop) in water per day",
+            "product_name": "Essential green",
+            "key": "recommendation41",
             "properties": {
               "Gluten_free": true,
               "non_vegetarian": false,

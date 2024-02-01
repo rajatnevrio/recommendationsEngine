@@ -1,26 +1,40 @@
-POST  http://127.0.0.1:5001/nutra-nourish/us-central1/saveUserDataFunction
+POST   https://us-central1-nutra-nourish.cloudfunctions.net/saveUserDataFunction
 Content-Type: application/json
 
 {
   "userDetails": {
-    "name": "user",
+    "name": "user", 
     "email": "email"
   },
   "response": [
-    { "question": "q1", "answer": "option2" },
+    { "question": "q1", "answer": "option1" },
     { "question": "q1.1", "answer": "option2" },
     { "question": "q2", "answer": 34},
+    { "question": "q3.2", "answer": "option4"},
+    { "question": "q11", "answer": ["option2","option4"]},
+
     { "question": "q3", "answer": ["option1","option2",
     "option3","option4","option5","option6","option7","option8",
     "option9","option10","option11","option12","option13","option14",
     "option15","option16","option17","option18","option19","option20"] },
     { "question": "q3.1", "answer": "option2"},
-    { "question": "q3.2", "answer": "option4"},
     { "question": "q3.3", "answer": ["option1","option2"]},
     { "question": "q3.4", "answer": "option2"},
-    { "question": "q3.5", "answer": ["option1","option2","option3"]}
+    { "question": "q3.5", "answer": ["option1","option2","option3"]},
+    { "question": "q4", "answer": "option1"},
+    { "question": "q5", "answer": "option1"},
+    { "question": "q6", "answer": "option1"},
+    { "question": "q7", "answer": 250},
+    { "question": "q8", "answer": "option1"},
+    { "question": "q9", "answer": "option1"},
+    { "question": "q10", "answer": "option1"},
+    { "question": "q12", "answer": "option2"},
+    { "question": "q13", "answer": "option3"},
+    { "question": "q14", "answer": "option1"}    
   ] 
-}
- 
-    
+}  
+  
+     
+
+
 
